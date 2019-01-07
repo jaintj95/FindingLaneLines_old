@@ -54,9 +54,12 @@ and right line list if the slope is positive
 
 One potential shortcoming would be what would happen when too much light or shadow is casted on the lanes. This would generate noise in the images. The RGB space is limited in this sense. 
 
-Another shortcoming could be detecting lane lines on curved roads. Our current implementation focus on drawing a straight line but this pipeline will fail when curved lane lines are encountered.
+Another shortcoming could be detecting lane lines on curved roads. Our current implementation focuses on drawing a straight line but this pipeline will fail when curved lane lines are encountered.
 
 
 ### 3. Suggest possible improvements to your pipeline
 
 A possible improvement would be to convert the image to alternate colour spaces such as HSV or HSL to overcome the limitations of RGB space.
+
+References used:
+1) Numpy polyfit function - https://peteris.rocks/blog/extrapolate-lines-with-numpy-polyfit/
