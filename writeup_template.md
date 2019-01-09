@@ -41,8 +41,9 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 
 2) Calculate the slope of each line and appending the coordinates to left line list if the slope is negative,
 and right line list if the slope is positive
+    2.1) For left lanes, I am also discarding all x coordinates that lie in the right half of the image and vice-versa
 
-3) Add an additional helper function that uses numpy's polyfit function to fit a line to the X and Y points.
+3) Add an additional helper function that calculates the average of all coordinates and then fits a line to the X and Y points.
 
 4) Calculate the final points x1, y1 and x2, y2 using appropriate equations
 
@@ -63,3 +64,4 @@ A possible improvement would be to convert the image to alternate colour spaces 
 
 References used:
 1) Numpy polyfit function - https://peteris.rocks/blog/extrapolate-lines-with-numpy-polyfit/
+( I am not using this function in the revised project)
